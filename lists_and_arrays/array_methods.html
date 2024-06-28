@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      // Example: Using array methods with functions to manipulate data
+
+      // Array of numbers
+      let numbers = [10, 20, 30, 40, 50];
+
+      // Function to add a new number to the array
+      function addNumber(arr, num) {
+        arr.push(num);
+        return arr;
+      }
+
+      // Function to remove the last number from the array
+      function removeLastNumber(arr) {
+        arr.pop();
+        return arr;
+      }
+
+      // Function to double each number in the array
+      function doubleNumbers(arr) {
+        return arr.map((num) => num * 2);
+      }
+
+      // Function to filter numbers greater than 25
+      function filterNumbers(arr) {
+        return arr.filter((num) => num > 25);
+      }
+
+      // Function to calculate the sum of all numbers in the array
+      function calculateSum(arr) {
+        return arr.reduce((acc, curr) => acc + curr, 0);
+      }
+
+      // Testing each function with the array
+      console.log("Original Array:", numbers);
+      console.log("After adding 60:", addNumber(numbers, 60));
+      console.log("After removing the last number:", removeLastNumber(numbers));
+      console.log("After doubling each number:", doubleNumbers(numbers));
+      console.log("Numbers greater than 25:", filterNumbers(numbers));
+      console.log("Total sum of numbers:", calculateSum(numbers));
+
+      // Example: Sorting, Iterating, and Destructuring Arrays
+
+      // Array of strings
+      let fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      // Sorting the array in alphabetical order
+      fruits.sort();
+      console.log("Sorted fruits:", fruits);
+
+      // Iterating over the array using a for...of loop
+      console.log("Iterating over fruits:");
+      for (let fruit of fruits) {
+        console.log(fruit);
+      }
+
+      // Destructuring the array into individual variables
+      let [first, second] = fruits;
+      console.log("First fruit:", first);
+      console.log("Second fruit:", second);
+
+      // Example: Using the spread and rest operators with arrays
+      // Example: Spread and Rest Operators with Arrays
+
+      // Spread Operator: Combining Arrays
+      let arr1 = [1, 2, 3];
+      let arr2 = [4, 5, 6];
+      let combinedArray = [...arr1, ...arr2];
+      console.log("Combined Array:", combinedArray);
+
+      // Spread Operator: Copying Arrays
+      let originalArray = [7, 8, 9];
+      let copiedArray = [...originalArray];
+      console.log("Copied Array:", copiedArray);
+
+      // Rest Operator: Extracting Remaining Elements
+      let [fir, sec, ...remaining] = combinedArray;
+      console.log("First Element:", fir);
+      console.log("Second Element:", sec);
+      console.log("Remaining Elements:", remaining);
+    </script>
+  </head>
+  <body></body>
+</html>
