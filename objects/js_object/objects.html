@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Superheros!</title>
+
+  <script>
+    // Constructor Function: a function that creates an object type
+    // It is defined using the function keyword, followed by the name of the function
+    // It is used to create new objects with the same properties and methods
+    function Superhero(name, powers, suitColor) {
+        this.name = name;
+        this.powers = powers;
+        this.suitColor = suitColor;
+    }
+
+    // Prototype Method: a method that is shared among all instances of an object type
+    Superhero.prototype.introduce = function() {
+        console.log("I am " + this.name + ", and I'm ready to save the world!");
+    };
+
+    // Additional method example for Superhero
+    Superhero.prototype.usePower = function(power) {
+        if (this.powers.includes(power)) {
+            console.log(this.name + " uses " + power + "!");
+        } else {
+            console.log(this.name + " doesn't have the power of " + power + "!");
+        }
+    };
+
+    // Creating Superhero Objects
+    let ironMan = new Superhero("Iron Man", ["Flight", "Super Strength", "Genius-level Intellect"], "Red and Gold");
+    let spiderMan = new Superhero("Spider-Man", ["Wall-crawling", "Superhuman Agility", "Spider-sense"], "Red and Blue");
+
+    ironMan.introduce(); // Output: "I am Iron Man, and I'm ready to save the world!"
+    spiderMan.introduce(); // Output: "I am Spider-Man, and I'm ready to save the world!"
+
+    ironMan.usePower("Flight"); // Output
+  </script>
+</head>
+
+<body>
+  
+</body>
+</html>
